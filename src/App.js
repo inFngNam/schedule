@@ -1,16 +1,18 @@
 import "./App.css";
+import { Clock } from "./components/Clock";
 import { TableBody } from "./components/TableBody";
 import { TableHead } from "./components/TableHead";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <body className="App-body">
         <table>
           <TableHead></TableHead>
           <TableBody></TableBody>
         </table>
-      </header>
+        <Clock time={new Date()}></Clock>
+      </body>
     </div>
   );
 
