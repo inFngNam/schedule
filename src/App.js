@@ -1,17 +1,23 @@
-import "./App.css";
-import { Clock } from "./components/Clock";
-import { TableBody } from "./components/TableBody";
-import { TableHead } from "./components/TableHead";
+import './App.css';
+import { Clock } from './components/Clock';
+import { TableBody } from './components/TableBody';
+import { TableHead } from './components/TableHead';
 
 function App() {
   return (
-    <div className="App">
-      <body className="App-body">
-        <table>
+    <div className='App'>
+      <body className='App-body'>
+        <table style={{ borderCollapse: 'collapse'}}>
           <TableHead></TableHead>
           <TableBody></TableBody>
         </table>
-        <Clock time={new Date()}></Clock>
+        <table style={{display: 'block', marginTop: '10px', clear: 'both'}}>
+          <tr>
+            <td>
+              <Clock time={new Date()}></Clock>
+            </td>
+          </tr>
+        </table>
       </body>
     </div>
   );

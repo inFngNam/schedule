@@ -15,7 +15,7 @@ export const TableHead = () => {
     <thead>
       <tr>
         {headers.map((header, index) => (
-          <th key={index} style={{ border: "2px solid #ffffff", width: index === 0 ? "25px" : "220px" }}> {header} </th>
+          <th key={index} style={{ border: "2px solid #ffffff", width: index === 0 ? "50px" : "220px" }}> {header} </th>
         ))}
       </tr>
     </thead>

@@ -9,10 +9,10 @@ export const TableBody = (props) => {
   return (
     <tbody>
       {rows.map((value, row) =>
-        <tr key={row} >
+        <tr key={row} style={{border: '2px solid #ffffff'}}>
           {columns.map((val, column) =>
-            column === 0 ? <td key={`${row}_${column}`}>{row + 1}</td> :
-              column === 1 ? <TimeRange key={`${row}_${column}`} time={row + 6} ></TimeRange> :
+            column === 0 ? <td key={`${row}_${column}`} style={{border: '2px solid #ffffff'}}>{row + 1}</td> :
+              column === 1 ? <TimeRange key={`${row}_${column}`} time={row + 6}></TimeRange> :
                             <Cell key={`${row}_${column}`} data={column}></Cell>)
           }
         </tr>
