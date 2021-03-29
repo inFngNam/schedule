@@ -6,7 +6,7 @@ const TimeRange = ({ time }) => {
   const endTime = time + 1  > 9 ? time === 24 ? "00:00" : `${time}:00` : `0${time + 1}:00`;
 
   return (
-    <td>
+    <td style={{border: '2px solid #ffffff'}}>
       {startTime} - {endTime}
     </td>
   )

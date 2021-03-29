@@ -8,8 +8,9 @@ export const Clock = ({ time }) => {
   })
     
   return (
-    <div>
-      {currentTime.toLocaleTimeString()}
+    <div style={{alignContent: 'baseline', alignItems: 'baseline'}}>
+      <p style={{margin:'0px 0px 0px'}}> {new Date().toDateString()} </p>
+      <p style={{margin:'0px 0px 0px', textAlign:'left'}} > {currentTime.toLocaleTimeString()} </p>
     </div>
   );
 };

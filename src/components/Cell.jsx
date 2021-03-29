@@ -15,15 +15,15 @@ const Cell = ({ data }) => {
   
   if (clicked) {
     return (
-      <td style={{ width: '220px', height: '40px', padding: '0px 0px 0px' }} align={'center'}>
+      <td style={{ width: '220px', height: '40px', padding: '0px 0px 0px', border: '2px solid #ffffff'}} align={'center'}>
         <input
           type='text'
           defaultValue={content}
           style={{
-            width: '90%',
+            width: '95%',
             boxSizing: 'border-box',
-            height: '90%',
-            padding: '0px 0px 0px',
+            height: '95%',
+            padding: '0px 0px 0px 0px',
             MozBoxSizing: 'border-box',
             WebkitBoxSizing: 'border-box'
           }}
@@ -32,7 +32,7 @@ const Cell = ({ data }) => {
         </input>
       </td>);
   } else {
-    return (<td style={{ width: '220px', height: '40px' }} align={'center'} onClick={handleOnClick}>{content}</td>)
+    return (<td style={{ width: '220px', height: '40px', border: '2px solid #ffffff' }} align={'center'} onClick={handleOnClick}>{content}</td>)
   }
  };
 
