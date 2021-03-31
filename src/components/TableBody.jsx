@@ -1,5 +1,5 @@
 import Cell from "./Cell";
-import TimeRange from "./TimeRange";
+import TimeRangeCell from "./TimeRangeCell";
 
 export const TableBody = (props) => {
   const rows = [...new Array(18)];
@@ -12,7 +12,7 @@ export const TableBody = (props) => {
         <tr key={row} style={{border: '2px solid #ffffff'}}>
           {columns.map((val, column) =>
             column === 0 ? <td key={`${row}_${column}`} style={{border: '2px solid #ffffff'}}>{row + 1}</td> :
-              column === 1 ? <TimeRange key={`${row}_${column}`} time={row + 6}></TimeRange> :
+              column === 1 ? <TimeRangeCell key={`${row}_${column}`} time={row + 6}></TimeRangeCell> :
                             <Cell key={`${row}_${column}`} data={column}></Cell>)
           }
         </tr>
