@@ -1,19 +1,19 @@
-import Cell from "./Cell";
-import TimeRangeCell from "./TimeRangeCell";
+import rows from '../data.json';
+import Cell from './Cell';
+import TimeRangeCell from './TimeRangeCell';
 
 export const TableBody = (props) => {
-  const rows = [...new Array(18)];
-  const columns = [...new Array(9)];
-  console.log("in")
 
   return (
     <tbody>
-      {rows.map((value, row) =>
-        <tr key={row} style={{border: '2px solid #ffffff'}}>
-          {columns.map((val, column) =>
-            column === 0 ? <td key={`${row}_${column}`} style={{border: '2px solid #ffffff'}}>{row + 1}</td> :
-              column === 1 ? <TimeRangeCell key={`${row}_${column}`} time={row + 6}></TimeRangeCell> :
-                            <Cell key={`${row}_${column}`} data={column}></Cell>)
+      {rows.map((row, rowIndex) =>
+        <tr key={rowIndex} style={{border: '2px solid #ffffff'}}>
+          {row.map((cellValue, columnIndex) =>
+            columnIndex === 0 ?
+              <td key={`${rowIndex}_${columnIndex}`} style={{ border: '2px solid #ffffff' }}>{rowIndex + 1}</td> :
+              columnIndex === 1 ?
+                <TimeRangeCell key={`${rowIndex}_${columnIndex}`} time={rowIndex + 6}></TimeRangeCell> :
+                <Cell key={`${rowIndex}_${columnIndex}`} data={cellValue}></Cell>)
           }
         </tr>
       )}

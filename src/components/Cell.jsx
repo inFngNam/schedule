@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Cell = ({ data }) => {
+const Cell = ({ data, setUpdate }) => {
   const [content, setContent] = useState(data);
   const [clicked, setClicked] = useState(false);
 
@@ -10,7 +10,7 @@ const Cell = ({ data }) => {
 
   const handleOnInput = function (e) {
     setContent(e.target.value);
-    setClicked(false)
+    setClicked(false);
   }
   
   if (clicked) {
